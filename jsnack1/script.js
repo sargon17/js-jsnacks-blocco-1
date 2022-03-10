@@ -2,6 +2,10 @@
 // chiedere nome
 // display messaggio permesso
 
+const userName = document.querySelector("#userName");
+const userBtn = document.querySelector("#userBtn");
+const finalMsg = document.querySelector("#finalMsg");
+
 const guestList = [
   "Daniel E. Zambrana",
   "Jeffrey H. Paul",
@@ -24,3 +28,12 @@ const guestList = [
   "Phyllis R. Pierce",
   "Michele M. Johnson",
 ];
+
+// TODO Ask the name
+userBtn.addEventListener("click", () => {
+  if (guestList.includes(userName.value)) {
+    finalMsg.innerHTML = "You are Allowed";
+  } else {
+    finalMsg.innerHTML = "You are not Allowed";
+  }
+});
