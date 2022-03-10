@@ -1,11 +1,23 @@
-const number = prompt("Input any lenght number:");
+// const number = prompt("Input any lenght number:");
 
-// let n = String(number).slice(0, 1);
+// let sum = 0;
+// for (let i = 0; i < number.length; i++) {
+//   let n = String(number).slice(i, i + 1);
+//   sum += parseInt(n);
+// }
+// console.log(sum);
 
+//-------------------- Max Number lenght ---------------
+let validNumber = false;
 let sum = 0;
-for (let i = 0; i < number.length; i++) {
-  let n = String(number).slice(i, i + 1);
-  sum += parseInt(n);
-}
-
+do {
+  const number = prompt("Input the number of max 4 characters:");
+  if (number.length === 4) {
+    validNumber = true;
+  }
+  for (let i = 0; i < number.length; i++) {
+    let n = String(number).slice(i, i + 1);
+    sum += parseInt(n);
+  }
+} while (!validNumber);
 console.log(sum);
