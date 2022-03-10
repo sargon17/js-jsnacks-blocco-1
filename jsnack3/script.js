@@ -16,8 +16,7 @@ do {
     validNumber = true;
   }
   for (let i = 0; i < number.length; i++) {
-    let n = String(number).slice(i, i + 1);
-    sum += parseInt(n);
+    sum += parseInt(number.slice(i, i + 1));
   }
 } while (!validNumber);
 console.log(sum);
